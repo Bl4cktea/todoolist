@@ -1,0 +1,59 @@
+.task {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-top: 0.75em;
+    border: 3px solid rgb(239, 225, 200);
+    border-radius: var(--_radius);
+    padding: .2em;
+   
+  }
+  
+  .taskGroup {
+    display: flex;
+    align-items: center;
+    gap: .5em;
+    padding: .3em;
+  }
+  
+  .label {
+    position: relative;
+    cursor: pointer;
+    text-align: left;
+    line-height: 0.75em;
+  }
+
+  button{
+  max-width: fit-content;
+  display: flex;
+  place-items: center;
+  gap: 0.5em;
+  background-color: hsl(var(--accent));
+  color: hsl(var(--bg));
+  text-decoration: none;
+  padding: 0.5em;
+  border-radius: var(--_radius);
+  box-shadow: 0.05em 0.1em 0.9em hsl(var(--accent) / 0.3),
+    0 0 0 -0.1em hsl(var(--bg)), 0 0 0 -0.2em hsl(var(--accent));
+  transition: box-shadow var(--_tspeed_fast) var(--_ttype_squish);
+  }
+
+  button:where(:active, :hover) {
+    background-color: hsl(var(--accent) / 0.7);
+    box-shadow: 0 0 0 hsl(var(--accent) / 0.3), 0 0 0 -0.1em hsl(var(--bg)),
+      0 0 0 -0.2em hsl(var(--accent));
+  }
+  
+  button:focus {
+    outline: none;
+  }
+  
+  button:focus-visible {
+    box-shadow: 0 0 0 hsl(var(--accent) / 0.3), 0 0 0 0.2em hsl(var(--bg)),
+      0 0 0 0.4em hsl(var(--accent) / 0.7);
+  }
+  
+  .delete {
+    --accent: var(--accent1);
+  }
+  
